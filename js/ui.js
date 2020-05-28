@@ -39,5 +39,10 @@ $(function(){
     }else{
       $('.nav_box').hide();
     };
-  }
+  };
+
+  // main banner slider
+  var mySwiper=new Swiper('.swiper-container',{
+    speed:300,
+  });
 });
