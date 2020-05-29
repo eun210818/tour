@@ -41,8 +41,17 @@ $(function(){
     };
   };
 
-  // main banner slider
-  var mySwiper=new Swiper('.swiper-container',{
-    speed:300,
+  // banner slider
+  var mySwiper=new Swiper('.mo_banner,.tab_banner',{
+    speed:400,
+    loop:true,
+    autoplay:{
+      delay:3000,
+    },
+    pagination:{
+      el:'.swiper-pagination',
+      type:'bullets',
+    },
   });
+
 });
