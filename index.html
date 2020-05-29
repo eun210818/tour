@@ -43,14 +43,14 @@
   <script src="js/ui.js"></script>
 </head>
 <body>
-  <div class="skip"><a href="#content">본문 바로가기</a></div>
+  <div class="skip"><a data-scroll href="#content">본문 바로가기</a></div>
   <div class="pos_fix">
     <ul class="clearfix">
       <li class="float_left"><a href="tel:010-8642-7656">전화문의</a></li>
       <li class="float_left"><a href="#" onclick="return false;" id="katalk">카카오톡 상담</a></li>
       <li class="float_left"><a href="#" onclick="return false;">오시는 길</a></li>
     </ul>
-    <p><a href="#header">TOP</a></p>
+    <p><a data-scroll href="#header">TOP</a></p>
   </div>
     <div class="warp">
       <header id="header">
@@ -166,12 +166,62 @@
               </div>
             </div>
           </div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-pagination">
+            <span class="swiper-pagination-bullet"></span>
+            <span class="swiper-pagination-bullet"></span>
+            <span class="swiper-pagination-bullet"></span>
+            <span class="stop">
+              <img src="images/stop.png" alt="stop">
+            </span>
+            <span class="play">
+              <img src="images/play.png" alt="play">
+            </span>
+          </div>
+      </section>
+      <section class="topplace" id="content">
+        <div class="content">
+          <h2>다시 찾는 인기 여행지 <span>TOP3</span></h2>
+          <ul class="top3 clearfix">
+            <li class="float_left">
+              <img src="images/topplace_img01.jpg" alt="top01">
+              <h3>성패트릭 대성당</h3>
+              <p>바쁜 뉴욕 안에서 정교하면서도 웅장한 기운에 침묵하게 되는 기도의 시간!</p>
+              <p><a href="#">VIEW</a></p>
+            </li>
+            <li class="float_left">
+              <img src="images/topplace_img02.jpg" alt="top02">
+              <h3>원주 뮤지엄 '산'</h3>
+              <p>전시된 유산들을 담아낸 건물에 신비로운 돌과 물의 테마가 담겨 있다.</p>
+              <p><a href="#">VIEW</a></p>
+            </li>
+            <li class="float_left">
+              <img src="images/topplace_img03.jpg" alt="top03">
+              <h3>일본 만국박람회 기념공원</h3>
+              <p>오사카 센리 반파쿠에는 드넓은 대지에 정원과 들, 물과 함께 하는 문화가 있다.</p>
+              <p><a href="#">VIEW</a></p>
+            </li>
+          </ul>
         </div>
       </section>
-      <section class="topplace" id="content">top place</section>
       <section class="notice">notice</section>
-      <footer>footer</footer>
+      <footer>
+        <div class="content">
+          <ul class="clearfix">
+            <li class="float_left">
+              <h5>
+                <span><a href="#" class="right_border">이용약관</a></span>
+                <span><a href="#">개인정보취급방침</a></span>
+              </h5>
+              <p>투어리스트인투어<br>서울특별시 종로구 혜화동 9길 청운빌딩 5층 / 대표전화 02-1234-5678 / E-mail : titour@touristintour.com<br>Copyright(c) TouristInTour all right reserved</p>
+            </li>
+            <li class="float_right">
+              <a href="#"><img src="images/blog_img.png" alt="blog"></a>
+              <a href="#"><img src="images/facebook_img.png" alt="facebook"></a>
+              <a href="#"><img src="images/insta_img.png" alt="instagram"></a>
+            </li>
+          </ul>
+        </div>
+      </footer>
     </div>
 </body>
 </html>

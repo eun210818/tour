@@ -54,4 +54,58 @@ $(function(){
     },
   });
 
+  // slider play/stop
+
+  // scroll
+  $(window).scroll(function(){
+    var winTop=$(window).scrollTop();
+    var winWidth=$(window).width();
+    // 모바일 scrolltop 200이상 조건
+    if(winTop>=200 && winWidth<=1065){
+      $('.pos_fix>p').css('display','flex');
+      // 모바일  scrolltop 200미만 조건
+    }else if(winTop<200 && winWidth<=1065){
+      $('.pos_fix>p').css('display','none');
+      // PC  scrolltop 200이상 조건
+    }else if(winTop>=200 && winWidth>=1066){
+      $('.pos_fix>ul').css('display','block');
+      $('.pos_fix>p').css('display','flex');
+      // PC  scrolltop 200미만 조건
+    }else if(winTop<200 && winWidth>=1066){
+      $('.pos_fix>ul').css('display','none');
+      $('.pos_fix>p').css('display','none');
+    }    
+  });
+
+  // window resize
+  $(window).resize(function(){
+    var winWidth=$(window).width();
+    if(winWidth<=800){
+      $('.pos_fix>ul').css('display','block');
+    }else if(winWidth<=1065){
+      $('.pos_fix>ul').css('display','none');
+    }
+  });
+  
+  // smooth scroll
+  var scroll = new SmoothScroll('a[data-scroll]', {
+    speed:300,
+  });
+
+  // grid
+  var winWidth=$(window).width();
+  if(winWidth<=800){
+    // mobile
+    $('.top3>li').removeClass('pc_g4');
+    $('.top3>li').removeClass('ta_g4');    
+  }else if(winWidth<=1065){
+    // tablet
+    $('.top3>li').removeClass('pc_g4');
+    $('.top3>li').addClass('ta_g4');
+  }else{
+    // pc
+    $('.top3>li').removeClass('ta_g4');
+    $('.top3>li').addClass('pc_g4');
+  }
+
 });
