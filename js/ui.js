@@ -1,6 +1,8 @@
 $(function(){
+  
   fnKatalk();
   fnmainNav();
+  gridSystem();
 
   // skip menu
   $('.skip>a').focus(function(){
@@ -79,6 +81,7 @@ $(function(){
 
   // window resize
   $(window).resize(function(){
+    gridSystem();
     var winWidth=$(window).width();
     if(winWidth<=800){
       $('.pos_fix>ul').css('display','block');
@@ -93,19 +96,14 @@ $(function(){
   });
 
   // grid
-  var winWidth=$(window).width();
-  if(winWidth<=800){
-    // mobile
-    $('.top3>li').removeClass('pc_g4');
-    $('.top3>li').removeClass('ta_g4');    
-  }else if(winWidth<=1065){
-    // tablet
-    $('.top3>li').removeClass('pc_g4');
-    $('.top3>li').addClass('ta_g4');
-  }else{
-    // pc
-    $('.top3>li').removeClass('ta_g4');
-    $('.top3>li').addClass('pc_g4');
-  }
+  function gridSystem(){
+    var winWidth=$(window).width();
+    if(winWidth<=800){
+      // mobile
+      $('.top3>li').removeClass('pc_g4');
+    }else{
+      $('.top3>li').addClass('pc_g4');
+    };
+  };
 
 });
